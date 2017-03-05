@@ -1,0 +1,86 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myMwordLabel" data-translate="mimarathiApp.mword.home.createOrEditLabel">Create or edit a Mword</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.mword.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.mword.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="mimarathiApp.mword.mword" for="field_mword">Mword</label>
+            <input type="text" class="form-control" name="mword" id="field_mword"
+                    ng-model="vm.mword.mword"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="mimarathiApp.mword.meaning" for="field_meaning">Meaning</label>
+            <input type="text" class="form-control" name="meaning" id="field_meaning"
+                    ng-model="vm.mword.meaning"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="mimarathiApp.mword.wordlength" for="field_wordlength">Wordlength</label>
+            <input type="number" class="form-control" name="wordlength" id="field_wordlength"
+                    ng-model="vm.mword.wordlength"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="mimarathiApp.mword.first" for="field_first">First</label>
+            <input type="text" class="form-control" name="first" id="field_first"
+                    ng-model="vm.mword.first"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="mimarathiApp.mword.second" for="field_second">Second</label>
+            <input type="text" class="form-control" name="second" id="field_second"
+                    ng-model="vm.mword.second"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="mimarathiApp.mword.third" for="field_third">Third</label>
+            <input type="text" class="form-control" name="third" id="field_third"
+                    ng-model="vm.mword.third"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="mimarathiApp.mword.fourth" for="field_fourth">Fourth</label>
+            <input type="text" class="form-control" name="fourth" id="field_fourth"
+                    ng-model="vm.mword.fourth"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="mimarathiApp.mword.fifth" for="field_fifth">Fifth</label>
+            <input type="text" class="form-control" name="fifth" id="field_fifth"
+                    ng-model="vm.mword.fifth"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="mimarathiApp.mword.isValid" for="field_isValid">Is Valid</label>
+            <input type="checkbox" class="form-control" name="isValid" id="field_isValid"
+                    ng-model="vm.mword.isValid"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="mimarathiApp.mword.status" for="field_status">Status</label>
+            <input type="text" class="form-control" name="status" id="field_status"
+                    ng-model="vm.mword.status"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

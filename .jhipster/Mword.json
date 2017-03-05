@@ -1,0 +1,52 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "mword",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "meaning",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "wordlength",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "first",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "second",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "third",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fourth",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fifth",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isValid",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170305182330",
+    "entityTableName": "mword",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "angularJSSuffix": "m"
+}

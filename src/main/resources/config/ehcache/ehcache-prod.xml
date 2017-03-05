@@ -22,5 +22,7 @@
 
     <cache alias="com.work.mr.social.SocialUserConnection" uses-template="simple"/>
 
+    <cache alias="com.work.mr.domain.Mword" uses-template="simple"/>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </config>

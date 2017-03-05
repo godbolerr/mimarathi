@@ -1,0 +1,30 @@
+{
+    "mimarathiApp": {
+        "mword" : {
+            "home": {
+                "title": "Mwords",
+                "createLabel": "Create a new Mword",
+                "createOrEditLabel": "Create or edit a Mword"
+            },
+            "created": "A new Mword is created with identifier {{ param }}",
+            "updated": "A Mword is updated with identifier {{ param }}",
+            "deleted": "A Mword is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Mword {{ id }}?"
+            },
+            "detail": {
+                "title": "Mword"
+            },
+            "mword": "Mword",
+            "meaning": "Meaning",
+            "wordlength": "Wordlength",
+            "first": "First",
+            "second": "Second",
+            "third": "Third",
+            "fourth": "Fourth",
+            "fifth": "Fifth",
+            "isValid": "Is Valid",
+            "status": "Status"
+        }
+    }
+}

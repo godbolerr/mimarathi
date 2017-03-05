@@ -1,0 +1,20 @@
+entity Mword {
+    mword String,
+	meaning String,
+	wordlength Integer,
+    first String,
+	second String,
+	third String,
+	fourth String,
+	fifth String,
+	isValid Boolean,
+    status String
+}
+
+paginate Mword with pagination
+
+dto * with mapstruct
+
+service all with serviceImpl 
+
+angularSuffix * with m

@@ -1,0 +1,59 @@
+
+<div>
+    <h2><span data-translate="mimarathiApp.mword.detail.title">Mword</span> {{vm.mword.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="mimarathiApp.mword.mword">Mword</span></dt>
+        <dd>
+            <span>{{vm.mword.mword}}</span>
+        </dd>
+        <dt><span data-translate="mimarathiApp.mword.meaning">Meaning</span></dt>
+        <dd>
+            <span>{{vm.mword.meaning}}</span>
+        </dd>
+        <dt><span data-translate="mimarathiApp.mword.wordlength">Wordlength</span></dt>
+        <dd>
+            <span>{{vm.mword.wordlength}}</span>
+        </dd>
+        <dt><span data-translate="mimarathiApp.mword.first">First</span></dt>
+        <dd>
+            <span>{{vm.mword.first}}</span>
+        </dd>
+        <dt><span data-translate="mimarathiApp.mword.second">Second</span></dt>
+        <dd>
+            <span>{{vm.mword.second}}</span>
+        </dd>
+        <dt><span data-translate="mimarathiApp.mword.third">Third</span></dt>
+        <dd>
+            <span>{{vm.mword.third}}</span>
+        </dd>
+        <dt><span data-translate="mimarathiApp.mword.fourth">Fourth</span></dt>
+        <dd>
+            <span>{{vm.mword.fourth}}</span>
+        </dd>
+        <dt><span data-translate="mimarathiApp.mword.fifth">Fifth</span></dt>
+        <dd>
+            <span>{{vm.mword.fifth}}</span>
+        </dd>
+        <dt><span data-translate="mimarathiApp.mword.isValid">Is Valid</span></dt>
+        <dd>
+            <span>{{vm.mword.isValid}}</span>
+        </dd>
+        <dt><span data-translate="mimarathiApp.mword.status">Status</span></dt>
+        <dd>
+            <span>{{vm.mword.status}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="mword-m-detail.edit({id:vm.mword.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

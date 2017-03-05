@@ -1,0 +1,78 @@
+<div>
+    <h2 data-translate="mimarathiApp.mword.home.title">Mwords</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="mword-m.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="mimarathiApp.mword.home.createLabel">
+                        Create new Mword
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="mword"><span data-translate="mimarathiApp.mword.mword">Mword</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="meaning"><span data-translate="mimarathiApp.mword.meaning">Meaning</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="wordlength"><span data-translate="mimarathiApp.mword.wordlength">Wordlength</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="first"><span data-translate="mimarathiApp.mword.first">First</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="second"><span data-translate="mimarathiApp.mword.second">Second</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="third"><span data-translate="mimarathiApp.mword.third">Third</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="fourth"><span data-translate="mimarathiApp.mword.fourth">Fourth</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="fifth"><span data-translate="mimarathiApp.mword.fifth">Fifth</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="isValid"><span data-translate="mimarathiApp.mword.isValid">Is Valid</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="status"><span data-translate="mimarathiApp.mword.status">Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="mword in vm.mwords track by mword.id">
+                    <td><a ui-sref="mword-m-detail({id:mword.id})">{{mword.id}}</a></td>
+                    <td>{{mword.mword}}</td>
+                    <td>{{mword.meaning}}</td>
+                    <td>{{mword.wordlength}}</td>
+                    <td>{{mword.first}}</td>
+                    <td>{{mword.second}}</td>
+                    <td>{{mword.third}}</td>
+                    <td>{{mword.fourth}}</td>
+                    <td>{{mword.fifth}}</td>
+                    <td>{{mword.isValid}}</td>
+                    <td>{{mword.status}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="mword-m-detail({id:mword.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="mword-m.edit({id:mword.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="mword-m.delete({id:mword.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>
