@@ -54,7 +54,13 @@ public final class Constants {
 
     public static final String SYSTEM_ACCOUNT = "system";
     
-    private static final String[] aConsonants = {
+    public static final String BARAKHADI = "barakhadi";
+    
+    public static final String TXT_EXTN = ".txt";
+    
+    public static final String FILE_SEPERATOR = "/";
+    
+    public static final String[] aConsonants = {
     		
     		"k", // क       1
     		"kh",// ख      2
@@ -111,7 +117,7 @@ public final class Constants {
 	
 
     
-    private static final Map<String, String> consonantMap =
+    public static final Map<String, String> consonantMap =
     	    Arrays.stream(new String[][] {
     	    	
     	
@@ -136,9 +142,9 @@ public final class Constants {
 
     	    	
     	    	{ "t", "त" }, // 16
-    	        { "th", "थ" }, // 17
+    	        { "th1", "थ" }, // 17
     	        { "d", "द" }, // 18
-    	        { "dh", "ध" }, // 19
+    	        { "dh2", "ध" }, // 19
     	        { "n", "न" }, // 20
 
     	    	
