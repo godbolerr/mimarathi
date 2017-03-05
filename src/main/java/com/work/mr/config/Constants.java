@@ -61,12 +61,12 @@ public final class Constants {
     public static final String FILE_SEPERATOR = "/";
     
     public static final String[] aConsonants = {
-    		
+    		"a", // अ
     		"k", // क       1
     		"kh",// ख      2
     		"g", // ग      3
     		"gh",// घ      4
-    		"g1", // G ङ      5
+ //   		"g1", // G ङ      5
     		
     		"ch", // च     6
     		"ch1", //Chछ     7
@@ -74,17 +74,17 @@ public final class Constants {
     		"jh", // झ    9
     		"ny", // ञ    10
     		
-    		"T", // ट     11
+    		"t1", // ट     11
     		"Th",// ठ    12
     		"D", // ड     13
     		"Dh",// ढ    14
-    		"N", // ण   15
+    		"n1", // ण   15
     		
-    		"t1", // त    16
-    		"th",// थ    17
-    		"dh", // द    18
-    		"dh1",// ध    19
-    		"n1", // न    20
+    		"t11", // त    16
+    		"thh",// थ    17
+    		"dd", // द    18
+    		"dhh",// ध    19
+    		"n", // न    20
     		
     		"p", // प    21
     		"ph",// फ   22
@@ -103,7 +103,7 @@ public final class Constants {
     		"h",  // ह    33
     		"l1",  // ळ    34
     		"ksh",// क्ष    35
-    		"dny" // ज्ञ    36
+    	//	"dny" // ज्ञ    36
     		
     }; 
 
@@ -119,8 +119,7 @@ public final class Constants {
     
     public static final Map<String, String> consonantMap =
     	    Arrays.stream(new String[][] {
-    	    	
-    	
+    	    	{ "a", "अ" },  // 0 
     	    	{ "k", "क" },  // 1 
     	        { "kh", "ख" }, // 2
     	        { "g", "ग" }, // 3
@@ -141,10 +140,10 @@ public final class Constants {
     	        { "n1", "ण" }, // 15
 
     	    	
-    	    	{ "t", "त" }, // 16
-    	        { "th1", "थ" }, // 17
-    	        { "d", "द" }, // 18
-    	        { "dh2", "ध" }, // 19
+    	    	{ "t11", "त" }, // 16
+    	        { "thh", "थ" }, // 17
+    	        { "dd", "द" }, // 18
+    	        { "dhh", "ध" }, // 19
     	        { "n", "न" }, // 20
 
     	    	
@@ -168,7 +167,7 @@ public final class Constants {
     	        { "h", "ह" }, // 33
     	        { "l1", "ळ" }, // 34
     	        { "ksh", "क्ष" },// 35
-    	        { "dny", "ज्ञ" },// 36
+    	  //      { "dny", "ज्ञ" },// 36
     	        
     	        
     	    }).collect(Collectors.toMap(kv -> kv[0], kv -> kv[1]));
